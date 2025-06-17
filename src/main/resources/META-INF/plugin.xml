@@ -1,0 +1,29 @@
+<idea-plugin>
+    <id>vk.springinitializr</id>
+    <name>Create Spring Boot Project</name>
+    <vendor email="VinayKumarsgt01@gmail.com">Vinay Kumar</vendor>
+
+    <description><![CDATA[
+        Use <a href="https://start.spring.io">Spring Initializr</a> in the <b>New Project</b> wizard.<br/><br/>
+        This plugin lets you configure and generate a Spring Boot project using start.spring.io directly inside IntelliJ.
+    ]]></description>
+
+    <depends>com.intellij.modules.platform</depends>
+
+
+
+
+
+
+
+    <!-- Set the minimum IntelliJ build version you're targeting -->
+    <idea-version since-build="242"/>
+
+    <!-- Extension point to register your module builder -->
+    <extensions defaultExtensionNs="com.intellij">
+        <moduleBuilder
+                id="START_SPRING_IO_MODULE"
+                builderClass="vk.StartSpringIOModuleBuilder"
+                order="first"/>
+    </extensions>
+</idea-plugin>
